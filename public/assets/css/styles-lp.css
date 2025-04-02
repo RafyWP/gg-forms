@@ -1,0 +1,117 @@
+:root {
+    --wp--preset--color--base: #131313;
+    --wp--preset--color--contrast: #ffffff;
+    --wp--preset--color--accent-1: #1a87ef;
+    --wp--preset--font-family--space-grotesk: "Space Grotesk", sans-serif;
+    --wp--preset--font-family--inter: Inter, sans-serif;
+}
+
+body {
+    font-family: var(--wp--preset--font-family--inter);
+    margin: 0;
+    padding: 0;
+    background: var(--wp--preset--color--base);
+    color: var(--wp--preset--color--contrast);
+    line-height: 1.5rem;
+}
+
+header {
+    padding: 3rem;
+    background-color: var(--wp--preset--color--accent-1);
+    color: var(--wp--preset--color--contrast);
+}
+
+header h1 {
+    font-family: var(--wp--preset--font-family--space-grotesk);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+p.spaced {
+    margin: 1em 0 1.5em;
+}
+
+.flexible {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.flexible > div {
+    flex: 1 1 220px;
+}
+
+.flexy {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+.review {
+    background:var(--wp--preset--color--base);
+    padding: 1.7rem 2rem;
+    border-radius:12px;
+}
+
+.review p {
+    font-size:1rem;
+    font-weight:600;
+    margin: 0 0 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.review blockquote {
+    margin:1rem 0 0;
+    padding-left:1rem;
+    border-left:3px solid #1a87ef;
+}
+
+.review small {
+    display: block;
+    opacity: .8;
+    margin-top: .6rem;
+}
+
+.center-block {
+    text-align: center;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.feature {
+    flex: 1 1 220px;
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.button {
+    display:inline-flex;
+    gap: 1rem;
+    margin:.8rem 0 1rem;
+    padding:0.75rem 1.5rem;
+    background:white;
+    color:#131313;
+    font-weight:bold;
+    border-radius:6px;
+    text-decoration:none;
+}

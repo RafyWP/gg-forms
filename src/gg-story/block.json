@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "ggf/gg-story",
+  "version": "1.0.0",
+  "title": "GG Story",
+  "category": "media",
+  "icon": "format-video",
+  "description": "A Gutenberg block for uploading and previewing a video as a story.",
+  "example": {},
+  "supports": {
+    "html": false,
+		"innerBlocks": true
+  },
+  "attributes": {
+    "storyId": {
+      "type": "string",
+      "default": ""
+    },
+    "videoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "aspectRatio": {
+      "type": "number",
+      "default": 1.777
+    },
+    "thumbnail": {
+      "type": "string"
+    },
+    "playIcon": {
+      "type": "string"
+    },
+    "playIconTop": {
+      "type": "number",
+      "default": 250
+    },
+    "transitionQuestion": {
+      "type": "string",
+      "default": ""
+    },
+    "showMinute": {
+      "type": "number",
+      "default": 0
+    },
+    "showSecond": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "textdomain": "gg-forms",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./style-index.css",
+  "render": "file:./render.php"
+}

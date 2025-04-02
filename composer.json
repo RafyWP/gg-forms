@@ -1,0 +1,15 @@
+{
+  "name": "rafyco/gg-forms",
+  "description": "A Gutenberg block for guided and gamified forms.",
+  "version": "1.0.0",
+  "author": "Rafy",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://rafy.site/projects/gg-forms",
+  "type": "wordpress-plugin",
+  "autoload": {
+    "psr-4": {
+      "RafyCo\\GGForms\\": "includes/"
+    }
+  },
+  "require": {}
+}

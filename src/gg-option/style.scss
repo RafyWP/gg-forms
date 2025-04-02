@@ -1,0 +1,19 @@
+.ggf-option-button {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--wp--preset--color--accent-1, #1a87ef);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  
+    &:hover,
+    &:focus {
+      background-color: #145dbf;
+      outline: none;
+    }
+}
+  

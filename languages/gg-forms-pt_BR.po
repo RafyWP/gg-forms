@@ -1,0 +1,220 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: GG Forms\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-02 11:10+0000\n"
+"PO-Revision-Date: 2025-04-02 13:22+0000\n"
+"Last-Translator: Rafael\n"
+"Language-Team: Português do Brasil\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
+"X-Domain: gg-forms"
+
+#: includes/Plugin.php:163
+msgid "Affiliate link updated."
+msgstr "Link de afiliado atualizado."
+
+#: includes/Plugin.php:171
+msgid "Affiliate Link:"
+msgstr "Link de Afiliado:"
+
+#: src/gg-forms/block.json:1 build/gg-forms/block.json:1
+msgctxt "block description"
+msgid "A Gutenberg block for interactive forms."
+msgstr "Um bloco Gutenberg para formulários interativos."
+
+#: src/gg-story/block.json:1 build/gg-story/block.json:1
+msgctxt "block description"
+msgid "A Gutenberg block for uploading and previewing a video as a story."
+msgstr ""
+"Um bloco Gutenberg para enviar e visualizar um vídeo como uma história."
+
+#: src/gg-option/block.json:1 build/gg-option/block.json:1
+msgctxt "block description"
+msgid "An option linked to a GG Story block."
+msgstr "Uma opção vinculada a um bloco GG Story."
+
+#: src/gg-forms/block.json:1 build/gg-forms/block.json:1
+msgctxt "block title"
+msgid "GG Forms"
+msgstr "GG Formulário"
+
+#: src/gg-option/block.json:1 build/gg-option/block.json:1
+msgctxt "block title"
+msgid "GG Option"
+msgstr "GG Opção"
+
+#: src/gg-story/block.json:1 build/gg-story/block.json:1
+msgctxt "block title"
+msgid "GG Story"
+msgstr "GG Vídeo"
+
+#: public/gg-forms-affiliate.php:53
+msgid "Built-in analytics"
+msgstr "Análise integrada"
+
+#: public/gg-forms-affiliate.php:80
+msgid "Crafted by"
+msgstr "Inventado por"
+
+#: includes/Plugin.php:136 includes/Plugin.php:137
+msgid "Demo"
+msgstr "Demonstração"
+
+#: public/gg-forms-affiliate.php:49
+msgid "Engaging UI encourages completion and interaction."
+msgstr "Uma interface envolvente que incentiva a conclusão."
+
+#: includes/Plugin.php:116
+msgid "Error"
+msgstr "Erro"
+
+#: public/gg-forms-affiliate.php:59
+msgid "Forms are designed to be fluid and delightful on any device."
+msgstr "Projetados para serem fluidos e agradáveis ​​em qualquer dispositivo."
+
+#: public/gg-forms-affiliate.php:39
+msgid "Forms flow like a guided path instead of a long list."
+msgstr "Os usuários são guiados durante o preenchimento."
+
+#: includes/Plugin.php:156
+msgid "Future configuration options will appear here."
+msgstr "Opções de configuração futuras aparecerão aqui."
+
+#. Name of the plugin
+#: public/gg-forms-affiliate.php:15 public/gg-forms-affiliate.php:21
+#: includes/Plugin.php:125 includes/Plugin.php:126
+msgid "GG Forms"
+msgstr "GG Forms"
+
+#: includes/Plugin.php:169
+msgid "GG Forms Affiliate Program"
+msgstr "Programa de Afiliados GG Forms"
+
+#: includes/Plugin.php:155
+msgid "GG Forms Settings"
+msgstr "Configurações do GG Forms"
+
+#: includes/Plugin.php:181
+msgid "GG Forms Stats"
+msgstr "Estatísticas do GG Forms"
+
+#: public/gg-forms-affiliate.php:33
+msgid "GG Forms turns them into conversations."
+msgstr "O GG Forms os transforma em conversas divertidas 💬"
+
+#. Description of the plugin
+msgid ""
+"Grow & Go. Guided & gamified forms that move users — and your business — "
+"forward."
+msgstr ""
+"Grow & Go. Formulários guiados e gamificados que movem os usuários — e seu "
+"negócio — para a frente."
+
+#: public/gg-forms-affiliate.php:22
+msgid "Guided & gamified forms that move users — and your business — forward."
+msgstr ""
+"Formulários guiados e gamificados que movem os usuários — e sua empresa — "
+"adiante."
+
+#. Author URI of the plugin
+msgid "https://rafy.site"
+msgstr "https://rafy.com.br"
+
+#. URI of the plugin
+msgid "https://rafy.site/projects/gg-forms"
+msgstr "https://rafy.com.br/projeto/gg-forms"
+
+#: public/gg-forms-affiliate.php:24 public/gg-forms-affiliate.php:75
+msgid "Install GG Forms now"
+msgstr "Instale o GG Forms agora"
+
+#: includes/Plugin.php:115
+msgid "Landing page not found."
+msgstr "Página de destino não encontrada."
+
+#: public/gg-forms-affiliate.php:48
+msgid "Light gamification"
+msgstr "Gamificação"
+
+#: public/gg-forms-affiliate.php:63
+msgid "Made for WordPress"
+msgstr "Feito para WordPress"
+
+#: public/gg-forms-affiliate.php:58
+msgid "Mobile-first experience"
+msgstr "Experiência mobile-first"
+
+#: src/gg-story/render.php:39 build/gg-story/render.php:39
+msgid "No video selected."
+msgstr "Nenhum vídeo selecionado."
+
+#. Author of the plugin
+msgid "Rafy"
+msgstr "Rafy"
+
+#: public/gg-forms-affiliate.php:71
+msgid "Ready to install?"
+msgstr "Pronto para instalar?"
+
+#: includes/Plugin.php:173
+msgid "Save"
+msgstr "Salvar"
+
+#: public/gg-forms-affiliate.php:64
+msgid "Seamless Gutenberg block and modern theme support."
+msgstr "Construa suas páginas de conversão com os blocos Gutenberg integrados."
+
+#: public/gg-forms-affiliate.php:44
+msgid "Show different fields based on previous answers."
+msgstr "Mostra campos diferentes com base em respostas anteriores."
+
+#: public/gg-forms-affiliate.php:43
+msgid "Smart branching"
+msgstr "Ramificação"
+
+#: includes/Plugin.php:182
+msgid "Soon: insights and form performance data."
+msgstr "Em breve: insights e dados de desempenho de formulários."
+
+#: public/gg-forms-affiliate.php:73
+msgid "Start collecting data with guided & gamified forms today."
+msgstr ""
+"Comece a coletar dados com formulários guiados e gamificados hoje mesmo."
+
+#: includes/Plugin.php:145 includes/Plugin.php:146
+msgid "Stats"
+msgstr "Estatísticas"
+
+#: public/gg-forms-affiliate.php:38
+msgid "Step-by-step guidance"
+msgstr "Orientação"
+
+#: public/gg-forms-affiliate.php:54
+msgid "Track form views, drop-off rates, and completions."
+msgstr "Acompanhe visualizações, taxas de desistência e conclusões."
+
+#: public/gg-forms-affiliate.php:31
+msgid "Traditional forms can feel like chores."
+msgstr "Formulários tradicionais são chatos."
+
+#: includes/Plugin.php:175
+msgid "View Landing Page"
+msgstr "Ver Landing Page"
+
+#: public/gg-forms-affiliate.php:29
+msgid "Why GG Forms?"
+msgstr "Por que GG Forms?"
+
+#: public/gg-forms-affiliate.php:81
+msgid "WordPress Expert Consultant"
+msgstr "Programador WordPress Especialista"
+
+#: public/gg-forms-affiliate.php:15
+msgid "WordPress Interactive Forms Plugin"
+msgstr "Plugin de formulários interativos do WordPress"

@@ -1,0 +1,87 @@
+.wp-block-ggf-gg-story {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.ggf-question-slide {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background: rgba(0,0,0,0.9);
+    color: #FFFFFF;
+    font-weight: 600;
+    padding: 1rem;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    pointer-events: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ggf-question-slide.visible {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.ggf-story-video::-webkit-media-controls, 
+.ggf-story-video::-webkit-media-controls-pip-button {
+    display: none !important;
+}
+
+.ggf-play-button {
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    margin-bottom: -64px;
+    margin-left: -64px;
+    border-radius: 64px;
+    z-index: 5;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.6);
+    color: #FFFFFF;
+}
+
+.ggf-play-button img {
+    width: 100%;
+}
+
+.ggf-play-button:has(img) {
+    background-color: transparent;
+}
+
+.ggf-option-button {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 1.2rem;
+    color: #fff;
+    text-align: start;
+    font-weight: 600;
+    background-color: var(--wp--preset--color--accent-1, #1a87ef);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+  
+.ggf-option-button:hover,
+.ggf-option-button:focus {
+    background-color: #145dbf;
+    outline: none;
+}
+
+.swiper-creative .swiper-slide .swiper-slide {
+    pointer-events: auto !important;
+}

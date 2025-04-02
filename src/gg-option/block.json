@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "ggf/gg-option",
+    "version": "1.0.0",
+    "title": "GG Option",
+    "category": "widgets",
+    "icon": "yes",
+    "description": "An option linked to a GG Story block.",
+    "parent": ["ggf/gg-forms"],
+    "textdomain": "gg-forms",
+    "supports": {
+      "html": false
+    },
+    "attributes": {
+      "linkedStoryId": {
+        "type": "string",
+        "default": ""
+      },
+      "label": {
+        "type": "string",
+        "default": "Option"
+      }
+    },
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./style-index.css"
+}
