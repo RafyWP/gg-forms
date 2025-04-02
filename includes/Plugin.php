@@ -12,6 +12,8 @@ class Plugin {
 	public function run() {
 		add_action( 'init', [ $this, 'init' ] );
 		add_action( 'admin_menu', [ $this, 'register_admin_menu' ] );
+		add_action( 'admin_init', [ $this, 'gg_forms_affiliate_section' ] );
+		add_action( 'admin_init', [ $this, 'gg_forms_settings_section' ] );
 		add_action( 'enqueue_block_assets', [ $this, 'enqueue_frontend_assets' ] );
 	}
 
@@ -133,15 +135,6 @@ class Plugin {
 
 		add_submenu_page(
 			'gg-forms-settings',
-			__( 'Affiliate', 'gg-forms' ),
-			__( 'Affiliate', 'gg-forms' ),
-			'manage_options',
-			'gg-forms-affiliate',
-			[ $this, 'render_affiliate_link_page' ]
-		);
-
-		add_submenu_page(
-			'gg-forms-settings',
 			__( 'Stats', 'gg-forms' ),
 			__( 'Stats', 'gg-forms' ),
 			'manage_options',
@@ -149,6 +142,17 @@ class Plugin {
 			[ $this, 'render_stats_page' ]
 		);
 
+		add_submenu_page(
+			'gg-forms-settings',
+			__( 'Affiliate', 'gg-forms' ),
+			__( 'Affiliate', 'gg-forms' ),
+			'manage_options',
+			'gg-forms-affiliate',
+			[ $this, 'render_affiliate_link_page' ]
+		);
+	}
+
+	public function gg_forms_affiliate_section() {
 		add_settings_section(
 			'gg_forms_affiliate_section',
 			__( 'Review Settings', 'gg-forms' ),
@@ -156,20 +160,20 @@ class Plugin {
 			'gg_forms_affiliate'
 		);
 		
-		register_setting( 'gg_forms_affiliate', 'review_author_type' );
-		register_setting( 'gg_forms_affiliate', 'review_author_name' );
-		register_setting( 'gg_forms_affiliate', 'review_datePublished' );
-		register_setting( 'gg_forms_affiliate', 'reviewRating' );
-		register_setting( 'gg_forms_affiliate', 'reviewBody' );
-		register_setting( 'gg_forms_affiliate', 'gg_forms_affiliate_link' );
+		register_setting( 'gg_forms_affiliate', 'ggf_review_author_type' );
+		register_setting( 'gg_forms_affiliate', 'ggf_review_author_name' );
+		register_setting( 'gg_forms_affiliate', 'ggf_review_datePublished' );
+		register_setting( 'gg_forms_affiliate', 'ggf_reviewRating' );
+		register_setting( 'gg_forms_affiliate', 'ggf_reviewBody' );
+		register_setting( 'gg_forms_affiliate', 'ggf_affiliate_link' );
 		
 		add_settings_field(
-			'review_author_type',
+			'ggf_review_author_type',
 			__( 'Author Type', 'gg-forms' ),
 			function () {
-				$value = get_option( 'review_author_type', 'Person' );
+				$value = get_option( 'ggf_review_author_type', 'Person' );
 				?>
-				<select name="review_author_type">
+				<select name="ggf_review_author_type">
 					<option value="Person" <?php selected( $value, 'Person' ); ?>>Person</option>
 					<option value="Organization" <?php selected( $value, 'Organization' ); ?>>Organization</option>
 				</select>
@@ -180,22 +184,22 @@ class Plugin {
 		);
 		
 		add_settings_field(
-			'review_author_name',
+			'ggf_review_author_name',
 			__( 'Author Name', 'gg-forms' ),
 			function () {
-				$value = esc_attr( get_option( 'review_author_name', '' ) );
-				echo "<input type='text' name='review_author_name' value='$value' />";
+				$value = esc_attr( get_option( 'ggf_review_author_name', '' ) );
+				echo "<input type='text' name='ggf_review_author_name' value='$value' />";
 			},
 			'gg_forms_affiliate',
 			'gg_forms_affiliate_section'
 		);
 		
 		add_settings_field(
-			'review_datePublished',
+			'ggf_review_datePublished',
 			__( 'Date Published', 'gg-forms' ),
 			function () {
-				$value = esc_attr( get_option( 'review_datePublished', date('Y-m-d') ) );
-				echo "<input type='hidden' name='review_datePublished' value='$value' />";
+				$value = esc_attr( get_option( 'ggf_review_datePublished', date('Y-m-d') ) );
+				echo "<input type='hidden' name='ggf_review_datePublished' value='$value' />";
 				echo "<span>$value</span>";
 			},
 			'gg_forms_affiliate',
@@ -203,45 +207,84 @@ class Plugin {
 		);
 		
 		add_settings_field(
-			'reviewRating',
+			'ggf_reviewRating',
 			__( 'Review Rating (0–5)', 'gg-forms' ),
 			function () {
-				$value = esc_attr( get_option( 'reviewRating', '5' ) );
-				echo "<input type='number' min='0' max='5' step='0.1' name='reviewRating' value='$value' />";
+				$value = esc_attr( get_option( 'ggf_reviewRating', '5' ) );
+				echo "<input type='number' min='0' max='5' step='0.1' name='ggf_reviewRating' value='$value' />";
 			},
 			'gg_forms_affiliate',
 			'gg_forms_affiliate_section'
 		);
 		
 		add_settings_field(
-			'reviewBody',
+			'ggf_reviewBody',
 			__( 'Review Text', 'gg-forms' ),
 			function () {
-				$value = esc_textarea( get_option( 'reviewBody', '' ) );
-				echo "<textarea name='reviewBody' rows='4' cols='50'>$value</textarea>";
+				$value = esc_textarea( get_option( 'ggf_reviewBody', '' ) );
+				echo "<textarea name='ggf_reviewBody' rows='4' cols='50'>$value</textarea>";
 			},
 			'gg_forms_affiliate',
 			'gg_forms_affiliate_section'
 		);
 
 		add_settings_field(
-			'gg_forms_affiliate_link',
+			'ggf_affiliate_link',
 			__( 'Affiliate Link', 'gg-forms' ),
 			function () {
-				$value = esc_attr( get_option( 'gg_forms_affiliate_link', '' ) );
-				echo "<input type='url' name='gg_forms_affiliate_link' value='$value' />";
+				$value = esc_attr( get_option( 'ggf_affiliate_link', '' ) );
+				echo "<input type='url' name='ggf_affiliate_link' value='$value' />";
 			},
 			'gg_forms_affiliate',
 			'gg_forms_affiliate_section'
 		);
 	}
 
+	public function gg_forms_settings_section() {
+		add_settings_section(
+			'gg_forms_settings_section',
+			__('General Settings', 'gg-forms'),
+			'__return_null',
+			'gg_forms_settings'
+		);
+
+		register_setting('gg_forms_settings', 'ggf_delete_data_on_uninstall', [
+			'type' => 'boolean',
+			'sanitize_callback' => 'absint',
+			'default' => 0,
+		]);
+	
+		add_settings_field(
+			'ggf_delete_data_on_uninstall',
+			__('Delete data on uninstall', 'gg-forms'),
+			function() {
+				$value = get_option('ggf_delete_data_on_uninstall', '');
+				?>
+				<label>
+					<input type="checkbox" name="ggf_delete_data_on_uninstall" value="1" <?php checked(1, $value); ?> />
+					<?php esc_html_e('Yes, delete all plugin data when uninstalled.', 'gg-forms'); ?>
+				</label>
+				<?php
+			},
+			'gg_forms_settings',
+			'gg_forms_settings_section'
+		);
+	}	
+
 	public function render_settings_page() {
-		echo '<div class="wrap">';
-		echo '<h1>' . esc_html__( 'GG Forms Settings', 'gg-forms' ) . '</h1>';
-		echo '<p>' . esc_html__( 'Future configuration options will appear here.', 'gg-forms' ) . '</p>';
-		echo '</div>';
-	}
+		?>
+		<div class="wrap">
+			<h1><?php esc_html_e( 'GG Forms Settings', 'gg-forms' ); ?></h1>
+			<form method="post" action="options.php">
+				<?php
+				settings_fields( 'gg_forms_settings' );
+				do_settings_sections( 'gg_forms_settings' );
+				submit_button();
+				?>
+			</form>
+		</div>
+		<?php
+	}	
 
 	public function render_affiliate_link_page() {
 		?>

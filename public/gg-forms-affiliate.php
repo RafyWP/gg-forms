@@ -1,16 +1,16 @@
 <?php
 defined('ABSPATH') || exit;
 
-$link = get_option( 'gg_forms_affiliate_link' );
+$link = get_option( 'ggf_affiliate_link' );
 if ( empty( $link ) ) {
   $link = 'https://rafy.site/projects/gg-form';
 }
 
-$author_type  = get_option( 'review_author_type', 'Person' );
-$author_name  = get_option( 'review_author_name', 'Anonymous' );
-$published    = get_option( 'review_datePublished', date('Y-m-d') );
-$rating       = floatval( get_option( 'reviewRating', 5 ) );
-$body         = get_option( 'reviewBody', 'This is a great plugin!' );
+$author_type  = get_option( 'ggf_review_author_type', 'Person' );
+$author_name  = get_option( 'ggf_review_author_name', 'Anonymous' );
+$published    = get_option( 'ggf_review_datePublished', date('Y-m-d') );
+$rating       = floatval( get_option( 'ggf_reviewRating', 5 ) );
+$body         = get_option( 'ggf_reviewBody', 'This is a great plugin!' );
 
 $date_format  = get_option( 'date_format' );
 ?>
