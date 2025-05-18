@@ -5,17 +5,17 @@
  * @package           RafyCo\GGForms
  * @wordpress-plugin
  * Plugin Name:       GG Forms
- * Plugin URI:        https://rafy.site/projects/gg-forms
+ * Plugin URI:        https://rafy.com.br/project/gg-forms
  * Description:       Grow & Go. Guided & gamified forms that move users — and your business — forward.
- * Version:           1.0.0
+ * Version:           0.6.4
  * Requires at least: 5.2
  * Requires PHP:      7.2
- * Author:            Rafy
- * Author URI:        https://rafy.site
+ * Author:            Rafy Co.
+ * Author URI:        https://rafy.com.br
  * Text Domain:       gg-forms
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Update URI:        https://rafy.site/projects/gg-forms
+ * Update URI:        https://github.com/RafyWP/gg-forms/tree/master
  */
 
 defined( 'ABSPATH' ) || exit;
